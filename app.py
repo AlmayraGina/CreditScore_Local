@@ -4,6 +4,9 @@ import joblib
 
 #Load
 
+print("File exists:", os.path.exists("artifacts/best_model.pkl"))
+print("Size:", os.path.getsize("artifacts/best_model.pkl"))
+
 artifact = joblib.load("artifacts/best_model.pkl")
 
 preprocessor = artifact["preprocessor"]
