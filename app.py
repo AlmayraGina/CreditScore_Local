@@ -2,10 +2,15 @@ import streamlit as st
 import pandas as pd
 import joblib
 import os
-#Load
 
+# Debug info
 print("File exists:", os.path.exists("artifacts/best_model.pkl"))
-print("Size:", os.path.getsize("artifacts/best_model.pkl"))
+
+if os.path.exists("artifacts/best_model.pkl"):
+    print("Size:", os.path.getsize("artifacts/best_model.pkl"))
+
+    with open("artifacts/best_model.pkl", "rb") as f:
+        print("First 100 bytes:", f.read(100))
 
 artifact = joblib.load("artifacts/best_model.pkl")
 
