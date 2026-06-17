@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
-
+import os
 #Load
 
 print("File exists:", os.path.exists("artifacts/best_model.pkl"))
